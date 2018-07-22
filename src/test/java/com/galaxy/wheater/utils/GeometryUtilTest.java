@@ -3,6 +3,9 @@ package com.galaxy.wheater.utils;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -82,5 +85,42 @@ public class GeometryUtilTest {
 		
 		assertThat(point.getX()).isLessThan(0.0);
 		assertThat(point.getY()).isGreaterThan(0.0);
+	}
+	
+	@Test
+	public void CalculateDistanceBetweenTwoPointsYZeroSuccess() {
+		Point p1 = new Point(-10, 0);
+		Point p2 = new Point(10, 0);
+		double expected = 20;
+		double result = GeometryUtil.calculateDistanceBetweenTwoPoints(p1, p2);
+		
+		assertThat(result).isEqualTo(expected);
+	}
+	
+	@Test
+	public void CalculateDistanceBetweenTwoPointsXZeroSuccess() {
+		Point p1 = new Point(0, 10);
+		Point p2 = new Point(0, -5);
+		double expected = 15;
+		
+		double result = GeometryUtil.calculateDistanceBetweenTwoPoints(p1, p2);
+		
+		assertThat(result).isEqualTo(expected);
+	}
+	
+	@Test
+	public void CalculatePerimeterFromSQuareFigure() throws Exception {
+		Point p1 = new Point(5, 5);
+		Point p2 = new Point(5, -5);
+		Point p3 = new Point(-5, -5);
+		Point p4 = new Point(-5, 5);
+		List<Point> list = new LinkedList<Point>();
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		list.add(p4);
+		double expected = 40;
+		double perimeter =  GeometryUtil.calculatePerimeterFromListOfPoints(list);
+		assertThat(perimeter).isEqualTo(expected);
 	}
 }
