@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.galaxy.wheater.pojo.Point;
-import com.galaxy.wheater.pojo.WheaterState;
+import com.galaxy.wheater.pojo.WeatherState;
 import com.galaxy.wheater.utils.GeometryUtil;
 
 public class PredictBestConditionStrategy extends BasePredictionStrategy implements IPredictionStrategy {
@@ -25,11 +25,11 @@ public class PredictBestConditionStrategy extends BasePredictionStrategy impleme
 	}
 
 	@Override
-	public WheaterState getWheaterPrediction() throws Exception {
-		WheaterState result = WheaterState.None;
+	public WeatherState getWeatherPrediction() throws Exception {
+		WeatherState result = WeatherState.None;
 		
 		if(vefiryCondition()) {
-			result = WheaterState.BestCondition;
+			result = WeatherState.BestCondition;
 		}
 		
 		return result;

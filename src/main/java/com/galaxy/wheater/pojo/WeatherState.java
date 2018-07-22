@@ -1,6 +1,6 @@
 package com.galaxy.wheater.pojo;
 
-public enum WheaterState {
+public enum WeatherState {
 	None("None"),
 	Raining("Raining"),
 	BestCondition("BestCondition"),
@@ -8,7 +8,7 @@ public enum WheaterState {
 	
 	private String description;
 	
-	private WheaterState(String description) {
+	private WeatherState(String description) {
 		this.description = description;
 	}
 	

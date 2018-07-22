@@ -7,11 +7,11 @@ public class PredictionReport {
 
 	private int fromDay;
 	private int toDay;
-	private List<WheaterPrediction> preditionsList;
+	private List<WeatherPrediction> preditionsList;
 	private int maxDayOfRainIntensity;
 	private HashMap<String, Integer> totals;
 	
-	public PredictionReport(int fromDay, int toDay, List<WheaterPrediction> preditionsList, HashMap<String, Integer> totals, int maxDayOfRainIntensity) {
+	public PredictionReport(int fromDay, int toDay, List<WeatherPrediction> preditionsList, HashMap<String, Integer> totals, int maxDayOfRainIntensity) {
 		super();
 		this.fromDay = fromDay;
 		this.toDay = toDay;
@@ -30,7 +30,7 @@ public class PredictionReport {
 		return toDay;
 	}
 
-	public List<WheaterPrediction> getPreditionsList() {
+	public List<WeatherPrediction> getPreditionsList() {
 		return preditionsList;
 	}
 

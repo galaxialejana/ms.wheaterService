@@ -3,7 +3,7 @@ package com.galaxy.wheater.service.strategies;
 import java.util.List;
 
 import com.galaxy.wheater.pojo.Point;
-import com.galaxy.wheater.pojo.WheaterState;
+import com.galaxy.wheater.pojo.WeatherState;
 import com.galaxy.wheater.utils.GeometryUtil;
 
 public class PredictRainingStrategy extends BasePredictionStrategy implements IPredictionStrategy {
@@ -22,10 +22,10 @@ public class PredictRainingStrategy extends BasePredictionStrategy implements IP
 	}
 
 	@Override
-	public WheaterState getWheaterPrediction() throws Exception {
-		WheaterState result = WheaterState.None;
+	public WeatherState getWeatherPrediction() throws Exception {
+		WeatherState result = WeatherState.None;
 		if(vefiryCondition()) {
-			result = WheaterState.Raining;
+			result = WeatherState.Raining;
 		}
 		
 		return result;

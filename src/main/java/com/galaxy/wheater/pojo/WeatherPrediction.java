@@ -1,10 +1,10 @@
 package com.galaxy.wheater.pojo;
 
-public class WheaterPrediction {
+public class WeatherPrediction {
 	private int day;
-	private WheaterState state;
+	private WeatherState state;
 	
-	public WheaterPrediction(int day, WheaterState state) {
+	public WeatherPrediction(int day, WeatherState state) {
 		this.day = day;
 		this.state = state;
 	}
@@ -13,7 +13,7 @@ public class WheaterPrediction {
 		return day;
 	}
 
-	public WheaterState getWheaterState() {
+	public WeatherState getWeatherState() {
 		return state;
 	}
 }
