@@ -1,4 +1,4 @@
-package com.galaxy.wheater.service;
+package com.galaxy.wheater.service.strategies;
 
 import com.galaxy.wheater.pojo.WheaterState;
 

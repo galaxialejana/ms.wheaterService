@@ -1,8 +1,9 @@
 package com.galaxy.wheater.service;
 
-import com.galaxy.wheater.pojo.WheaterPrediction;
+
+import com.galaxy.wheater.pojo.PredictionReport;
 
 public interface IWheaterService {
 	
-	public WheaterPrediction predictWheaterint(int day);
+	public PredictionReport predictWheater(int fromDay, int toDay) throws Exception;
 }

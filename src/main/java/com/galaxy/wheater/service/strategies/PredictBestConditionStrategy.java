@@ -1,4 +1,4 @@
-package com.galaxy.wheater.service;
+package com.galaxy.wheater.service.strategies;
 
 import java.util.LinkedList;
 import java.util.List;

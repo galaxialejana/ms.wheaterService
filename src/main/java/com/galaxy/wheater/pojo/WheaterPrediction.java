@@ -2,18 +2,18 @@ package com.galaxy.wheater.pojo;
 
 public class WheaterPrediction {
 	private int day;
-	private String wheater;
+	private WheaterState state;
 	
-	public WheaterPrediction(int day, String wheater) {
+	public WheaterPrediction(int day, WheaterState state) {
 		this.day = day;
-		this.wheater = wheater;
+		this.state = state;
 	}
 
 	public int getDay() {
 		return day;
 	}
 
-	public String getWheater() {
-		return wheater;
+	public WheaterState getWheaterState() {
+		return state;
 	}
 }
