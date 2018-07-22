@@ -4,14 +4,20 @@ import java.util.List;
 
 public class SystemSun {
 	
-	private List<Element> elements;
+	private List<Planet> planets;
+	private Sun sun;
 	
-	public SystemSun(List<Element> elements) {
+	public SystemSun(List<Planet> planets, Sun sun) {
 		
-		this.elements = elements;
+		this.planets = planets;
+		this.sun = sun;
 	}
 
-	public List<Element> getElements() {
-		return elements;
+	public List<Planet> getPlanets() {
+		return this.planets;
+	}
+
+	public Sun getSun() {
+		return sun;
 	}
 }

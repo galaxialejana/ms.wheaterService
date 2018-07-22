@@ -19,6 +19,7 @@ public class GeometryUtilTest {
 
 	@Test
 	public void GetPositionWhenAngleIsZeroSuccess() {
+		
 		double distance = 300;
 		double angle = 0; 
 		Point point = GeometryUtil.getPosition(distance, angle);
@@ -29,6 +30,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void GetPositionWhenAngleIs90Success() {
+		
 		double distance = 300;
 		double angle = 90; 
 		Point point = GeometryUtil.getPosition(distance, angle);
@@ -39,6 +41,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void GetPositionYEqualsAngle30ZeroSuccess() {
+		
 		double distance = 300;
 		double angle = 30; 
 		Point point = GeometryUtil.getPosition(distance, angle);
@@ -48,6 +51,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void GetPositionYEqualsAngle60ZeroSuccess() {
+		
 		double distance = 300;
 		double angle = 60; 
 		Point point = GeometryUtil.getPosition(distance, angle);
@@ -59,6 +63,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void GetPositionYEqualsAngle120ZeroSuccess() {
+		
 		double distance = 300;
 		double angle = 120; 
 		Point point = GeometryUtil.getPosition(distance, angle);
@@ -69,6 +74,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void GetPositionYEqualsAngle210ZeroSuccess() {
+		
 		double distance = 300;
 		double angle = 210; 
 		Point point = GeometryUtil.getPosition(distance, angle);
@@ -79,6 +85,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void GetPositionYEqualsAngle330ZeroSuccess() {
+		
 		double distance = 300;
 		double angle = 330; 
 		Point point = GeometryUtil.getPosition(distance, angle);
@@ -89,6 +96,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void CalculateDistanceBetweenTwoPointsYZeroSuccess() {
+		
 		Point p1 = new Point(-10, 0);
 		Point p2 = new Point(10, 0);
 		double expected = 20;
@@ -99,6 +107,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void CalculateDistanceBetweenTwoPointsXZeroSuccess() {
+		
 		Point p1 = new Point(0, 10);
 		Point p2 = new Point(0, -5);
 		double expected = 15;
@@ -110,6 +119,7 @@ public class GeometryUtilTest {
 	
 	@Test
 	public void CalculatePerimeterFromSQuareFigure() throws Exception {
+		
 		Point p1 = new Point(5, 5);
 		Point p2 = new Point(5, -5);
 		Point p3 = new Point(-5, -5);
@@ -119,8 +129,87 @@ public class GeometryUtilTest {
 		list.add(p2);
 		list.add(p3);
 		list.add(p4);
+		
 		double expected = 40;
 		double perimeter =  GeometryUtil.calculatePerimeterFromListOfPoints(list);
+		
 		assertThat(perimeter).isEqualTo(expected);
+	}
+	
+	@Test
+	public void AllPointsAreAlignedSuccess() {
+		
+		Point p1 = new Point(5, 5);
+		Point p2 = new Point(-5, -5);
+		Point p3 = new Point(-10, -10);
+		Point p4 = new Point(20, 20);
+		List<Point> points = new LinkedList<Point>();
+		points.add(p1);
+		points.add(p2);
+		points.add(p3);
+		points.add(p4);
+		
+		boolean result = GeometryUtil.AreAligned(points);
+		
+		assertThat(result).isTrue();
+		
+		
+	}
+	
+
+	@Test
+	public void pointsAreNotAlignedSuccess() {
+		
+		Point p1 = new Point(5, 5);
+		Point p2 = new Point(5, -5);
+		Point p3 = new Point(10, -10);
+		Point p4 = new Point(20, 20);
+		List<Point> points = new LinkedList<Point>();
+		points.add(p1);
+		points.add(p2);
+		points.add(p3);
+		points.add(p4);
+		
+		boolean result = GeometryUtil.AreAligned(points);
+		
+		assertThat(result).isFalse();	
+	}
+	
+
+	@Test
+	public void pointIsInsideTheFigureAreaSuccess() throws Exception {
+		
+		Point p = new Point(0, 0);
+		Point p1 = new Point(15, 15);
+		Point p2 = new Point(10, -10);
+		Point p3 = new Point(-20, 5);
+		List<Point> points = new LinkedList<Point>();
+		points.add(p1);
+		points.add(p2);
+		points.add(p3);
+		
+		
+		boolean result = GeometryUtil.IsPointInTheFigure(points, p);
+		
+		assertThat(result).isTrue();	
+	}
+	
+
+	@Test
+	public void pointIsNotInsideInTheFigureSuccess() throws Exception {
+		
+		Point p = new Point(0, 0);
+		Point p1 = new Point(15, 15);
+		Point p2 = new Point(10, 5);
+		Point p3 = new Point(20, -5);
+		List<Point> points = new LinkedList<Point>();
+		points.add(p1);
+		points.add(p2);
+		points.add(p3);
+		
+		
+		boolean result = GeometryUtil.IsPointInTheFigure(points, p);
+		
+		assertThat(result).isFalse();	
 	}
 }
