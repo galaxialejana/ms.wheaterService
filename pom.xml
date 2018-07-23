@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>com.galaxy.wheather</name>
-	<description>service to predict wheater in the fa away galaxy</description>
+	<description>service to predict weather in the fa away galaxy</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

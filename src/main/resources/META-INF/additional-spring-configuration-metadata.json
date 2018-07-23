@@ -8,5 +8,20 @@
     "name": "galaxy.dbservice.port",
     "type": "java.lang.String",
     "description": "port where is running  'dbservice'"
+  },
+  {
+    "name": "galaxy.schedule.startday",
+    "type": "java.lang.String",
+    "description": "A description for 'galaxy.schedule.startday'"
+  },
+  {
+    "name": "galaxy.schedule.time",
+    "type": "java.lang.String",
+    "description": "A description for 'galaxy.schedule.time'"
+  },
+  {
+    "name": "galaxy.schedule.range",
+    "type": "java.lang.String",
+    "description": "A description for 'galaxy.schedule.range'"
   }
 ]}
