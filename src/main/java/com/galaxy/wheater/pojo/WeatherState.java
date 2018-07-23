@@ -1,7 +1,7 @@
 package com.galaxy.wheater.pojo;
 
 public enum WeatherState {
-	None("None"),
+	Normal("Normal"),
 	Raining("Raining"),
 	BestCondition("BestCondition"),
 	Drought("Drought");
@@ -13,6 +13,11 @@ public enum WeatherState {
 	}
 	
 	public String getDescription() {
+		return description;
+	}
+	
+	@Override
+	public String toString() {
 		return description;
 	}
 }

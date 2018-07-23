@@ -2,14 +2,18 @@ package com.galaxy.wheater.pojo;
 
 public class Element {
 	
-	private Point ubication;
+	private Point position;
 	
-	public Element(Point ubication) {
+	public Element() {
 		super();
-		this.ubication = ubication;
+	}
+	
+	public Element(Point position) {
+		super();
+		this.position = position;
 	}
 
-	public Point getUbication() {
-		return ubication;
+	public Point getPosition() {
+		return position;
 	}
 }

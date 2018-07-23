@@ -23,7 +23,7 @@ public class PredictRainingStrategy extends BasePredictionStrategy implements IP
 
 	@Override
 	public WeatherState getWeatherPrediction() throws Exception {
-		WeatherState result = WeatherState.None;
+		WeatherState result = WeatherState.Normal;
 		if(vefiryCondition()) {
 			result = WeatherState.Raining;
 		}

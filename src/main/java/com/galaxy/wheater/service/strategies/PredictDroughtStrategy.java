@@ -21,7 +21,7 @@ public class PredictDroughtStrategy extends BasePredictionStrategy implements IP
 	@Override
 	public WeatherState getWeatherPrediction() {
 		
-		WeatherState result = WeatherState.None;
+		WeatherState result = WeatherState.Normal;
 		
 		if(vefiryCondition()) {
 			result = WeatherState.Drought;

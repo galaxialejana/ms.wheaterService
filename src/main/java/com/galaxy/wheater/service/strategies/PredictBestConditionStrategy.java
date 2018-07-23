@@ -26,7 +26,7 @@ public class PredictBestConditionStrategy extends BasePredictionStrategy impleme
 
 	@Override
 	public WeatherState getWeatherPrediction() throws Exception {
-		WeatherState result = WeatherState.None;
+		WeatherState result = WeatherState.Normal;
 		
 		if(vefiryCondition()) {
 			result = WeatherState.BestCondition;

@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "galaxy.dbservice.server",
+    "type": "java.lang.String",
+    "description": "server name where is running 'dbservice'"
+  },
+  {
+    "name": "galaxy.dbservice.port",
+    "type": "java.lang.String",
+    "description": "port where is running  'dbservice'"
+  }
+]}
